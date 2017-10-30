@@ -1,19 +1,17 @@
-'use strict';
-var test = require('ava');
-var fn = require('./');
+import test from 'ava';
+import m from '.';
 
-test(function (t) {
-	t.true(fn(fn));
-	t.true(fn(function () {}));
-	t.false(fn(undefined));
-	t.false(fn(null));
-	t.false(fn('foo'));
-	t.false(fn(/foo/));
-	t.false(fn(true));
-	t.false(fn(false));
-	t.false(fn(NaN));
-	t.false(fn(1));
-	t.false(fn({foo: true}));
-	t.false(fn(['foo', 'bar']));
-	t.end();
+test(t => {
+	t.true(m(m));
+	t.true(m(() => {}));
+	t.false(m(undefined));
+	t.false(m(null));
+	t.false(m('foo'));
+	t.false(m(/foo/));
+	t.false(m(true));
+	t.false(m(false));
+	t.false(m(NaN));
+	t.false(m(1));
+	t.false(m({foo: true}));
+	t.false(m(['foo', 'bar']));
 });

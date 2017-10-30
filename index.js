@@ -1,6 +1,4 @@
 'use strict';
-var toString = Object.prototype.toString;
+const toString = Object.prototype.toString;
 
-module.exports = function (x) {
-	return toString.call(x) === '[object Function]';
-};
+module.exports = x => toString.call(x) === '[object Function]';

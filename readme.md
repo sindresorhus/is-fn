@@ -8,7 +8,7 @@ In Node.js, just use `typeof fn` which works exactly the same. This module can b
 ## Install
 
 ```
-$ npm install --save is-fn
+$ npm install is-fn
 ```
 
 
@@ -17,7 +17,7 @@ $ npm install --save is-fn
 ```js
 const isFn = require('is-fn');
 
-isFn(function () {});
+isFn(() => {});
 //=> true
 
 isFn('unicorn');
@@ -25,6 +25,11 @@ isFn('unicorn');
 ```
 
 
+## Related
+
+- [@sindresorhus/is](https://github.com/sindresorhus/is) - Type check values
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
