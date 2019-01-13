@@ -4,6 +4,8 @@ import isFn from '.';
 test('main', t => {
 	t.true(isFn(isFn));
 	t.true(isFn(() => {}));
+	t.true(isFn(function * () {}));
+	t.true(isFn(async () => {}));
 	t.false(isFn(undefined));
 	t.false(isFn(null));
 	t.false(isFn('foo'));

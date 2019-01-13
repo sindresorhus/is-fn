@@ -1,4 +1,7 @@
 'use strict';
-const {toString} = Object.prototype;
-
-module.exports = input => toString.call(input) === '[object Function]';
+module.exports = input => {
+	const type = Object.prototype.toString.call(input);
+	return type === '[object Function]' ||
+		type === '[object GeneratorFunction]' ||
+		type === '[object AsyncFunction]';
+};
