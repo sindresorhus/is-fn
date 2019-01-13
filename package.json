@@ -1,6 +1,6 @@
 {
 	"name": "is-fn",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Check if a value is a function",
 	"license": "MIT",
 	"repository": "sindresorhus/is-fn",
