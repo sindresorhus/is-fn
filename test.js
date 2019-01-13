@@ -2,6 +2,9 @@ import test from 'ava';
 import isFn from '.';
 
 test('main', t => {
+	function f() {}
+
+	t.true(isFn(f));
 	t.true(isFn(isFn));
 	t.true(isFn(() => {}));
 	t.true(isFn(function * () {}));
