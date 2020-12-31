@@ -1,4 +1,4 @@
-# is-fn [![Build Status](https://travis-ci.org/sindresorhus/is-fn.svg?branch=master)](https://travis-ci.org/sindresorhus/is-fn)
+# is-fn
 
 > Check if a value is a function
 
