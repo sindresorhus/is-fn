@@ -1,22 +1,22 @@
 import test from 'ava';
-import isFn from '.';
+import isFunction from './index.js';
 
 test('main', t => {
 	function f() {}
 
-	t.true(isFn(f));
-	t.true(isFn(isFn));
-	t.true(isFn(() => {}));
-	t.true(isFn(function * () {}));
-	t.true(isFn(async () => {}));
-	t.false(isFn(undefined));
-	t.false(isFn(null));
-	t.false(isFn('foo'));
-	t.false(isFn(/foo/));
-	t.false(isFn(true));
-	t.false(isFn(false));
-	t.false(isFn(NaN));
-	t.false(isFn(1));
-	t.false(isFn({foo: true}));
-	t.false(isFn(['foo', 'bar']));
+	t.true(isFunction(f));
+	t.true(isFunction(isFunction));
+	t.true(isFunction(() => {}));
+	t.true(isFunction(function * () {}));
+	t.true(isFunction(async () => {}));
+	t.false(isFunction(undefined));
+	t.false(isFunction(null));
+	t.false(isFunction('foo'));
+	t.false(isFunction(/foo/));
+	t.false(isFunction(true));
+	t.false(isFunction(false));
+	t.false(isFunction(Number.NaN));
+	t.false(isFunction(1));
+	t.false(isFunction({foo: true}));
+	t.false(isFunction(['foo', 'bar']));
 });
